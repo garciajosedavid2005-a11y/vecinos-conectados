@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+
+  usuarios-db:
+    image: postgres:16
+    container_name: usuarios-db
+    environment:
+      POSTGRES_DB: usuarios_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5433:5432"
+    volumes:
+      - usuarios_data:/var/lib/postgresql/data
+
+  tareas-db:
+    image: postgres:16
+    container_name: tareas-db
+    environment:
+      POSTGRES_DB: tareas_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5434:5432"
+    volumes:
+      - tareas_data:/var/lib/postgresql/data
+
+  notificaciones-db:
+    image: postgres:16
+    container_name: notificaciones-db
+    environment:
+      POSTGRES_DB: notificaciones_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5435:5432"
+    volumes:
+      - notificaciones_data:/var/lib/postgresql/data
+
+volumes:
+  usuarios_data:
+  tareas_data:
+  notificaciones_data:
