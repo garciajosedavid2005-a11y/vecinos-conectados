@@ -25,6 +25,19 @@ public abstract class Tarea {
         this.fechaPublicacion = LocalDateTime.now();
     }
 
+    //Constructor específico para el mapeo de la base de datos
+    protected Tarea(String id, String titulo, String categoria, EstadoTarea estado, String publicadorId,
+                    String asignadoId, LocalDateTime fechaPublicacion, CalculadoraRecompensa calculadoraRecompensa) {
+    this.id = id;
+    this.titulo = titulo;
+    this.categoria = categoria;
+    this.estado = estado;
+    this.publicadorId = publicadorId;
+    this.asignadoId = asignadoId;
+    this.fechaPublicacion = fechaPublicacion;
+    this.calculadoraRecompensa = calculadoraRecompensa;
+}
+
     public void asignar(String usuarioId) {
         if (this.estado != EstadoTarea.PUBLICADA) {
             throw new IllegalStateException("Solo se puede asignar una tarea que este publicada");
