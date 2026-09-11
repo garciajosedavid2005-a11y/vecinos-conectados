@@ -32,4 +32,14 @@ public class UseCaseConfig {
     public ListarTareasUseCase listarTareasUseCase(TareaRepository tareaRepository) {
         return new ListarTareasUseCase(tareaRepository);
     }
+
+    @Bean
+    public IniciarTareaUseCase iniciarTareaUseCase(TareaRepository tareaRepository) {
+        return new IniciarTareaUseCase(tareaRepository);
+    }
+
+    @Bean
+    public ObtenerTareaUseCase obtenerTareaUseCase(TareaRepository tareaRepository) {
+        return new ObtenerTareaUseCase(tareaRepository);
+    }
 }
