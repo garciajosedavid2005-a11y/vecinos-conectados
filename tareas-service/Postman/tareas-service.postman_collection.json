@@ -1,0 +1,383 @@
+{
+  "info": {
+    "_postman_id": "d391db54-8fac-4459-97b3-fecd6c477de6",
+    "name": "Tareas Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57443257",
+    "_collection_link": "https://go.postman.co/collection/57443257-d391db54-8fac-4459-97b3-fecd6c477de6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - Crear tarea FISICA",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Ayuda con mudanza\",\r\n  \"categoria\": \"hogar\",\r\n  \"publicadorId\": \"usuario-1\",\r\n  \"tipo\": \"FISICA\",\r\n  \"ubicacion\": \"Calle 45 #12-30\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Crear tarea INTELECTUAL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Tutoria de matematicas\",\r\n  \"categoria\": \"educacion\",\r\n  \"publicadorId\": \"usuario-1\",\r\n  \"tipo\": \"INTELECTUAL\",\r\n  \"nivelDificultad\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Crear tarea MASCOTAS",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Pasear al perro de dona Marta\",\r\n  \"categoria\": \"mascotas\",\r\n  \"publicadorId\": \"usuario-1\",\r\n  \"tipo\": \"MASCOTAS\",\r\n  \"tipoMascota\": \"Perro\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Asignar tarea",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"usuarioId\": \"usuario-2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3/asignar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+            "asignar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05-Iniciar tarea",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3/iniciar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+            "iniciar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06-Completar tarea",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3/completar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+            "completar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07-Obtener tarea por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08-Listar Todas las Tareas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09-Listar Tarea por estado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas?estado=COMPLETADA",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ],
+          "query": [
+            {
+              "key": "estado",
+              "value": "COMPLETADA"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10-Listar Tarea Por Publicador",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas?publicadorId=usuario-1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ],
+          "query": [
+            {
+              "key": "publicadorId",
+              "value": "usuario-1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11-Error Tarea Completada",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3/completar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+            "completar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12-Error Tarea que no existe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/tareas/123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13-Error de Validación titulo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"\",\r\n  \"categoria\": \"hogar\",\r\n  \"publicadorId\": \"usuario-1\",\r\n  \"tipo\": \"FISICA\",\r\n  \"ubicacion\": \"Calle 45\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "14-Falta campo condicional",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Tarea sin ubicacion\",\r\n  \"categoria\": \"hogar\",\r\n  \"publicadorId\": \"usuario-1\",\r\n  \"tipo\": \"FISICA\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "15-Asignar Tarea ya asignada",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"usuarioId\": \"usuario-3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/tareas/c219fe3a-13bd-42b4-bb4d-6f84b6879fc3/asignar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "tareas",
+            "c219fe3a-13bd-42b4-bb4d-6f84b6879fc3",
+            "asignar"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

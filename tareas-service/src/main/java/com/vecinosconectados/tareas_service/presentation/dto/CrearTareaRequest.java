@@ -3,7 +3,6 @@ package com.vecinosconectados.tareas_service.presentation.dto;
 import com.vecinosconectados.tareas_service.domain.model.TipoTarea;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
 import lombok.Getter;
 
 @Getter
